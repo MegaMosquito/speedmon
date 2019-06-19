@@ -17,8 +17,8 @@ MY_COUCHDB_PASSWORD       := 'p4ssw0rd'
 MY_COUCHDB_DATABASE       := 'wan_speed'
 MY_COUCHDB_TIME_FORMAT    := '%Y-%m-%d %H:%M:%S'
 
-MY_SECONDS_BETWEEN_TESTS  := 120
-MY_SPEEDTEST_CACHE_SIZE   := 10
+MY_SECONDS_BETWEEN_TESTS  := 600
+MY_SPEEDTEST_CACHE_SIZE   := 2000
 
 
 # Running `make` with no target builds and runs speedmon as a restarting daemon

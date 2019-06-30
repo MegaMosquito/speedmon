@@ -8,9 +8,14 @@
 #
 
 
+# Some bits from https://github.com/MegaMosquito/netstuff/blob/master/Makefile
+LOCAL_DEFAULT_ROUTE     := $(shell sh -c "ip route | grep default")
+LOCAL_IP_ADDRESS        := $(word 7, $(LOCAL_DEFAULT_ROUTE))
+
+
 # Configure all of these "MY_" variables for your personal situation
 
-MY_COUCHDB_ADDRESS        := '192.168.123.3'
+MY_COUCHDB_ADDRESS        := $(LOCAL_IP_ADDRESS)
 MY_COUCHDB_PORT           := 5984
 MY_COUCHDB_USER           := 'admin'
 MY_COUCHDB_PASSWORD       := 'p4ssw0rd'
